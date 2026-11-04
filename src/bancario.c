@@ -1,18 +1,7 @@
 /* ============================================================================
  *  SISTEMA DE CONTROLE BANCARIO
  *  Disciplina : Estrutura de Dados
- *
- *  Descricao  : Cadastro de contas bancarias em uma lista duplamente
- *               encadeada (alocacao dinamica com malloc/free) e registro
- *               das movimentacoes financeiras em uma lista simplesmente
- *               encadeada. Ao abrir o programa os dados sao carregados dos
- *               arquivos Contas.dat e Movimentacoes.dat e, ao escolher
- *               "Sair", eles sao gravados de volta nesses arquivos.
- *
- *  Compilar   : gcc bancario.c -o bancario.exe
- *  Executar   : bancario.exe   (os arquivos .dat devem ficar na mesma pasta
- *               de onde o programa e executado)
- *
+ *   Alunos: Matheus Henrique Barros e Miguel Possatti Camargo
  * ========================================================================== */
 
 #include <stdio.h>
@@ -25,7 +14,7 @@
 #define ARQ_CONTAS          "Contas.dat"
 #define ARQ_MOVIMENTACOES   "Movimentacoes.dat"
 
-//Definição das Estruturas de Dados (conforme o enunciado do trabalho)
+//Definição das Estruturas de Dados
 
 //ContaBancaria e cada no da lista duplamente encadeada de contas
 typedef struct ContaBancaria
