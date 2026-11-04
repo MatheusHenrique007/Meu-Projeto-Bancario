@@ -1,0 +1,5 @@
+bancario
+bancario.exe
+*.o
+Contas.dat
+Movimentacoes.dat
