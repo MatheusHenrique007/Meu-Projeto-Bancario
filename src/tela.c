@@ -18,61 +18,45 @@ void gotoxy(int x, int y)
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
+//Caixa com 76 colunas de largura, compativel com o console padrao do Windows
+#define LINHA_BORDA  "+--------------------------------------------------------------------------+"
+#define LINHA_VAZIA  "|                                                                          |"
+
 void tela(){
+    int i;
+
     gotoxy(1,1);
-    printf("+--------------------------------------------------------------------------------------------------------------------+");
-    gotoxy(1,3);
-    printf("|                                                                                                                    |");
+    printf(LINHA_BORDA);
     gotoxy(1,2);
-    printf("|  UNICIVE                              SISTEMA DE CONTROLE BANCARIO                             ESTRUTURA DE DADOS  |");
+    printf(LINHA_VAZIA);
+    gotoxy(1,3);
+    printf(LINHA_VAZIA);
     gotoxy(1,4);
-    printf("+--------------------------------------------------------------------------------------------------------------------+");
-    gotoxy(1,5);
-    printf("|                                                                                                                    |");
-    gotoxy(1,6);
-    printf("|                                                                                                                    |");
-    gotoxy(1,7);
-    printf("|                                                                                                                    |");
-    gotoxy(1,8);
-    printf("|                                                                                                                    |");
-    gotoxy(1,9);
-    printf("|                                                                                                                    |");
-    gotoxy(1,10);
-    printf("|                                                                                                                    |");
-    gotoxy(1,11);
-    printf("|                                                                                                                    |");
-    gotoxy(1,12);
-    printf("|                                                                                                                    |");
-    gotoxy(1,13);
-    printf("|                                                                                                                    |");
-    gotoxy(1,14);
-    printf("|                                                                                                                    |");
-    gotoxy(1,15);
-    printf("|                                                                                                                    |");
-    gotoxy(1,16);
-    printf("|                                                                                                                    |");
-    gotoxy(1,17);
-    printf("|                                                                                                                    |");
-    gotoxy(1,18);
-    printf("|                                                                                                                    |");
-    gotoxy(1,19);
-    printf("|                                                                                                                    |");
-    gotoxy(1,20);
-    printf("|                                                                                                                    |");
-    gotoxy(1,21);
-    printf("|                                                                                                                    |");
+    printf(LINHA_BORDA);
+
+    for (i = 5; i <= 21; i++){
+        gotoxy(1,i);
+        printf(LINHA_VAZIA);
+    }
+
     gotoxy(1,22);
-    printf("+--------------------------------------------------------------------------------------------------------------------+");
+    printf(LINHA_BORDA);
     gotoxy(1,23);
-    printf("| MSG:                                                                                                               |");
+    printf(LINHA_VAZIA);
     gotoxy(1,24);
-    printf("+--------------------------------------------------------------------------------------------------------------------+");
+    printf(LINHA_BORDA);
+
+    gotoxy(3,23);
+    printf("MSG:");
+
+    gotoxy(14,2);
+    printf("SISTEMA DE CONTROLE BANCARIO - ESTRUTURA DE DADOS");
 }
 
 //Função que escreve um título centralizado na linha 3 da tela
 void titulo(const char *txt)
 {
-    gotoxy(60 - (int)(strlen(txt) / 2), 3);
+    gotoxy(38 - (int)(strlen(txt) / 2), 3);
     printf("%s", txt);
 }
 
@@ -86,7 +70,7 @@ void limparBuffer()
 //Função que limpa a mensagem
 void limpa_mensagem(){
     gotoxy(07,23);
-    printf("                                                                        ");
+    printf("                                                                   ");
 }
 
 //Função que lê um número inteiro; devolve -1 se o usuário não digitar um número
