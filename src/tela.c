@@ -21,10 +21,10 @@ void gotoxy(int x, int y)
 void tela(){
     gotoxy(1,1);
     printf("+--------------------------------------------------------------------------------------------------------------------+");
-    gotoxy(1,3);
-    printf("|                                                                                                                    |");
     gotoxy(1,2);
     printf("|  UNICIVE                              SISTEMA DE CONTROLE BANCARIO                             ESTRUTURA DE DADOS  |");
+    gotoxy(1,3);
+    printf("|                                              MENU PRINCIPAL                                                        |");
     gotoxy(1,4);
     printf("+--------------------------------------------------------------------------------------------------------------------+");
     gotoxy(1,5);
