@@ -1,7 +1,7 @@
 /* ============================================================================
  *  CONTAS.C - DADOS, REGRAS E PERSISTENCIA DAS CONTAS (LISTA DUPLAMENTE ENCADEADA)
  *  Disciplina : Estrutura de Dados
- *  Alunos: Miguel Possatti e Matheus Henrique 
+ *  Alunos: Miguel Possatti e Matheus Henrique
  * ========================================================================== */
 
 #include <stdio.h>
@@ -233,57 +233,57 @@ int remove_posicao_conta(ListaContas *L, int pos)
 
 //Função que desenha os rótulos do formulário de conta
 void tela_conta(){
-    gotoxy(12,5);
+    gotoxy(3,5);
     printf("Codigo da Conta......:");
-    gotoxy(9,7);
+    gotoxy(3,7);
     printf("1- Banco.............:");
-    gotoxy(9,9);
+    gotoxy(3,9);
     printf("2- Agencia...........:");
-    gotoxy(9,11);
+    gotoxy(3,11);
     printf("3- Numero da Conta...:");
-    gotoxy(9,13);
+    gotoxy(3,13);
     printf("4- Tipo da Conta.....:");
-    gotoxy(85,13);
+    gotoxy(50,13);
     printf("(corrente/poupanca/credito)");
-    gotoxy(9,15);
+    gotoxy(3,15);
     printf("5- Saldo.............:");
-    gotoxy(85,15);
+    gotoxy(50,15);
     printf("(use ponto: 500.00)");
-    gotoxy(9,17);
+    gotoxy(3,17);
     printf("6- Limite............:");
-    gotoxy(85,17);
+    gotoxy(50,17);
     printf("(use ponto: 200.00)");
-    gotoxy(9,19);
+    gotoxy(3,19);
     printf("7- Status............:");
-    gotoxy(85,19);
+    gotoxy(50,19);
     printf("(ativo/inativo)");
 }
 
 //Função que mostra os dados de uma conta no formulário
 void mostra_conta(ContaBancaria *c)
 {
-    gotoxy(32,5);
+    gotoxy(26,5);
     printf("%d", c->codigo_conta);
 
-    gotoxy(32,7);
+    gotoxy(26,7);
     printf("%s", c->banco);
 
-    gotoxy(32,9);
+    gotoxy(26,9);
     printf("%s", c->agencia);
 
-    gotoxy(32,11);
+    gotoxy(26,11);
     printf("%s", c->numero_conta);
 
-    gotoxy(32,13);
+    gotoxy(26,13);
     printf("%s", c->tipo_conta);
 
-    gotoxy(32,15);
+    gotoxy(26,15);
     printf("%.2f", c->vl_saldo);
 
-    gotoxy(32,17);
+    gotoxy(26,17);
     printf("%.2f", c->vl_limite);
 
-    gotoxy(32,19);
+    gotoxy(26,19);
     printf("%s", c->status);
 }
 
@@ -292,9 +292,9 @@ void le_campo_conta(int campo, ContaBancaria *c)
 {
     int linha = 5 + campo * 2;
 
-    gotoxy(32,linha);
+    gotoxy(26,linha);
     printf("                                                  ");
-    gotoxy(32,linha);
+    gotoxy(26,linha);
 
     switch (campo)
     {
@@ -316,9 +316,9 @@ void le_campo_conta(int campo, ContaBancaria *c)
 
         case 5 :
             do{
-                gotoxy(32,linha);
+                gotoxy(26,linha);
                 printf("                    ");
-                gotoxy(32,linha);
+                gotoxy(26,linha);
                 c->vl_saldo = le_double();
 
                 if (c->vl_saldo < 0){
@@ -333,9 +333,9 @@ void le_campo_conta(int campo, ContaBancaria *c)
 
         case 6 :
             do{
-                gotoxy(32,linha);
+                gotoxy(26,linha);
                 printf("                    ");
-                gotoxy(32,linha);
+                gotoxy(26,linha);
                 c->vl_limite = le_double();
 
                 if (c->vl_limite < 0){
@@ -350,9 +350,9 @@ void le_campo_conta(int campo, ContaBancaria *c)
 
         case 7 :
             do{
-                gotoxy(32,linha);
+                gotoxy(26,linha);
                 printf("                    ");
-                gotoxy(32,linha);
+                gotoxy(26,linha);
                 le_texto(c->status, sizeof(c->status));
 
                 if (strcmp(c->status, "ativo") != 0 && strcmp(c->status, "inativo") != 0){
