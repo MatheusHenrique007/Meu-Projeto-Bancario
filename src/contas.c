@@ -1,6 +1,7 @@
 /* ============================================================================
  *  CONTAS.C - DADOS, REGRAS E PERSISTENCIA DAS CONTAS (LISTA DUPLAMENTE ENCADEADA)
  *  Disciplina : Estrutura de Dados
+ *  Alunos: Miguel Possatti e Matheus Henrique 
  * ========================================================================== */
 
 #include <stdio.h>
