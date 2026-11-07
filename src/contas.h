@@ -1,8 +1,8 @@
 /* ============================================================================
- *  MOVIMENTACOES.C - MOVIMENTACOES FINANCEIRAS (LISTA SIMPLESMENTE ENCADEADA)
+ *  CONTAS.H - DEFINICAO DA STRUCT ContaBancaria E DAS FUNCOES DE CONTAS
  *  Disciplina : Estrutura de Dados
- *  Aluno: Miguel Possatti e Matheus Henrique
- * ============================================================================ */
+ *  Alunos: Miguel Possatti e Matheus Henrique
+ * ========================================================================== */
 
 #ifndef CONTAS_H
 #define CONTAS_H
