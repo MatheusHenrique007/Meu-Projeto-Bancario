@@ -1,5 +1,4 @@
-bancario
-bancario.exe
+output/
 *.o
 Contas.dat
 Movimentacoes.dat
